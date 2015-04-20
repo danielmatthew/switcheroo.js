@@ -11,7 +11,6 @@
   function swapImages() {
     for (var i = 0; i < imagesLength; i++) {
       var image = images[i];
-      console.log(image);
 
 
         // Going to swap immediately for time being
@@ -26,6 +25,9 @@
         if (source && alt) {
           image.setAttribute('data-switch', source);
           image.setAttribute('src', alt);
+          image.classList.add('animated');
+          image.classList.add('infinite');
+          image.classList.add('fadeIn');
         }
     }
   }
